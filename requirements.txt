@@ -1,0 +1,11 @@
+kafka-python
+pyspark
+transformers
+torch
+requests
+yfinance
+pandas
+plotly
+dash
+python-dotenv
+tweepy
