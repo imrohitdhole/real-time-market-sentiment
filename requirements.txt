@@ -1,11 +1,24 @@
+# Streaming + processing
 kafka-python
 pyspark
+
+# NLP models (FinBERT sentiment, BERT NER)
 transformers
 torch
-requests
-yfinance
+
+# Data + analysis
 pandas
+numpy
+scipy
+scikit-learn
+yfinance
+matplotlib
+
+# Dashboards
+streamlit
 plotly
-dash
+
+# Producers
+requests
 python-dotenv
 tweepy

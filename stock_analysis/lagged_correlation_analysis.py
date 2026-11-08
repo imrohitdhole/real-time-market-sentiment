@@ -6,7 +6,8 @@ import yfinance as yf
 
 df_sent = pd.read_csv("output/sentiment_only.csv")
 sentiment_map = {'POSITIVE': 1, 'NEUTRAL': 0, 'NEGATIVE': -1}
-df_sent['Score'] = df_sent['Sentiment'].map(sentiment_map)
+# FinBERT returns lowercase labels ("positive"), so normalise case before mapping
+df_sent['Score'] = df_sent['Sentiment'].astype(str).str.upper().map(sentiment_map)
 df_sent['Date'] = pd.to_datetime(df_sent['Date']).dt.date
 
 df_sent = df_sent[['Date', 'Score']]
